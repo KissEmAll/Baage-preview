@@ -76,7 +76,8 @@ export default function Home() {
   0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(59,123,245,0.3)); }
   50% { transform: translateY(-16px); filter: drop-shadow(0 0 60px rgba(59,123,245,0.6)); } }
 .captain-img { width: 380px; height: auto;
-  filter: drop-shadow(0 0 40px rgba(59,123,245,0.4)); }
+  filter: drop-shadow(0 0 40px rgba(59,123,245,0.4));
+  mix-blend-mode: screen; }
 .captain-status { display: inline-flex; align-items: center; gap: 8px;
   background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
   border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
@@ -137,7 +138,7 @@ votre projet de voyage.
         <div className="captain-zone">
   <div className="captain-float">
     <img
-  src="https://raw.githubusercontent.com/KissEmAll/Baage-preview/main/baage-preview/Captain_Baage_-_HD.png"
+  src="https://raw.githubusercontent.com/KissEmAll/Baage-preview/main/baage-preview/Captain%20Baage%20-%20WEB%20HD.png"
   alt="Captain Baage"
   className="captain-img"
   width="380"
