@@ -137,7 +137,7 @@ votre projet de voyage.
         <div className="captain-zone">
   <div className="captain-float">
     <img 
-      src="https://i.imgur.com/XXXXXXX.png" 
+      src="/baage-preview/Captain_Baage_-_HD.png"
       alt="Captain Baage"
       className="captain-img"
     />
