@@ -121,9 +121,9 @@ export default function Home() {
         <div>
           <p className="eyebrow">Conciergerie de voyage IA</p>
           <h1 className="headline">
-            Il connaît<br />
-            <em>l&apos;endroit exact</em><br />
-            qu&apos;il vous faut.
+            Racontez à notre concierge<br />
+<em>Cap&apos;tain Baage</em><br />
+votre projet de voyage.
           </h1>
           <p className="subline">
             Parlez à Captain Baage de vos envies — même les plus vagues.
@@ -138,17 +138,18 @@ export default function Home() {
           </div>
         </div>
         <div className="captain-zone">
-          <div className="captain-ring">
-            <div className="captain-inner">
-              <p className="captain-title">Captain Baage</p>
-              <div className="captain-status">
-                <span className="dot" />
-                Disponible maintenant
-              </div>
-              <p className="captain-cta">Cliquez pour lui parler ↓</p>
-            </div>
-          </div>
-        </div>
+  <div className="captain-float">
+    <img 
+      src="https://i.imgur.com/XXXXXXX.png" 
+      alt="Captain Baage"
+      className="captain-img"
+    />
+    <div className="captain-status">
+      <span className="dot" />
+      Disponible maintenant
+    </div>
+  </div>
+</div>
       </main>
 
       <footer className="footer">
