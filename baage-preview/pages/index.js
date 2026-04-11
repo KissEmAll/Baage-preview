@@ -136,10 +136,12 @@ votre projet de voyage.
         </div>
         <div className="captain-zone">
   <div className="captain-float">
-    <img 
-      src="/baage-preview/Captain_Baage_-_HD.png"
-      alt="Captain Baage"
-      className="captain-img"
+    <img
+  src="https://raw.githubusercontent.com/KissEmAll/Baage-preview/main/baage-preview/Captain_Baage_-_HD.png"
+  alt="Captain Baage"
+  className="captain-img"
+  width="380"
+/>
     />
     <div className="captain-status">
       <span className="dot" />
