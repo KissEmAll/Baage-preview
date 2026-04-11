@@ -20,10 +20,7 @@ export default function Home() {
       <Head>
         <title>Baage — Votre génie du voyage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
         <style>{`
           * { box-sizing: border-box; margin: 0; padding: 0; }
           body { background: #0D1B3E; color: #fff; font-family: 'DM Sans', sans-serif; min-height: 100vh; }
@@ -40,59 +37,44 @@ export default function Home() {
           .halo { position: fixed; width: 700px; height: 700px; border-radius: 50%;
             background: radial-gradient(circle, rgba(59,123,245,0.1) 0%, transparent 70%);
             top: -200px; right: -150px; pointer-events: none; z-index: 0;
-            animation: float 12s ease-in-out infinite alternate; }
-          @keyframes float { 0% { transform: scale(1); } 100% { transform: scale(1.1) translate(-30px, 40px); } }
+            animation: floathalo 12s ease-in-out infinite alternate; }
+          @keyframes floathalo { 0% { transform: scale(1); } 100% { transform: scale(1.1) translate(-30px, 40px); } }
           .header { position: relative; z-index: 10; display: flex; align-items: center;
             justify-content: space-between; padding: 28px 60px;
             border-bottom: 1px solid rgba(255,255,255,0.06); }
-          .logo { font-family: 'Cormorant Garamond', serif; font-size: 38px;
-            font-weight: 300; color: #fff; letter-spacing: 0.06em; }
+          .logo { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 300; color: #fff; letter-spacing: 0.06em; }
           .logo span { color: #F2A923; font-weight: 600; }
           .nav { display: flex; gap: 36px; }
-          .nav a { font-size: 12px; font-weight: 400; letter-spacing: 0.12em;
-            text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+          .nav a { font-size: 12px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
           .nav a:hover { color: #F2A923; }
           .hero { position: relative; z-index: 5; display: grid; grid-template-columns: 1fr 1fr;
             align-items: center; gap: 80px; padding: 80px 60px; max-width: 1300px; margin: 0 auto; }
           .eyebrow { font-size: 11px; font-weight: 500; color: #F2A923; letter-spacing: 0.2em;
-            text-transform: uppercase; margin-bottom: 20px;
-            display: flex; align-items: center; gap: 12px; }
+            text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
           .eyebrow::before { content: ''; width: 28px; height: 1px; background: #F2A923; display: inline-block; }
           .headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5vw, 70px);
             font-weight: 300; line-height: 1.1; color: #fff; margin-bottom: 24px; }
           .headline em { font-style: italic; color: #F2A923; font-weight: 400; }
-          .subline { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5);
-            line-height: 1.9; max-width: 400px; margin-bottom: 40px; }
+          .subline { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.9; max-width: 400px; margin-bottom: 40px; }
           .tags { display: flex; flex-wrap: wrap; gap: 10px; }
           .tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
             border-radius: 100px; padding: 8px 18px; font-size: 13px; color: rgba(255,255,255,0.5);
             cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-          .tag:hover { background: rgba(242,169,35,0.12); border-color: rgba(242,169,35,0.35);
-            color: #FFCF6B; transform: translateY(-2px); }
+          .tag:hover { background: rgba(242,169,35,0.12); border-color: rgba(242,169,35,0.35); color: #FFCF6B; transform: translateY(-2px); }
           .captain-zone { display: flex; align-items: center; justify-content: center; }
-.captain-float { display: flex; flex-direction: column; align-items: center; gap: 24px;
-  animation: floating 4s ease-in-out infinite; }
-@keyframes floating {
-  0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(59,123,245,0.3)); }
-  50% { transform: translateY(-16px); filter: drop-shadow(0 0 60px rgba(59,123,245,0.6)); } }
-.captain-img { width: 380px; height: auto;
-  filter: drop-shadow(0 0 40px rgba(59,123,245,0.4));
-  mix-blend-mode: screen; }
-.captain-status { display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
-  border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
-.dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80;
-          .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80;
-            animation: pulse 2s ease-in-out infinite; }
+          .captain-float { display: flex; flex-direction: column; align-items: center; gap: 24px; animation: floating 4s ease-in-out infinite; }
+          @keyframes floating {
+            0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(59,123,245,0.3)); }
+            50% { transform: translateY(-16px); filter: drop-shadow(0 0 60px rgba(59,123,245,0.6)); } }
+          .captain-img { width: 380px; height: auto; mix-blend-mode: screen; }
+          .captain-status { display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
+            border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
+          .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: pulse 2s ease-in-out infinite; }
           @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-          .captain-cta { margin-top: 20px; font-size: 12px; letter-spacing: 0.1em;
-            color: rgba(242,169,35,0.6); text-transform: uppercase;
-            animation: blink 2.5s ease-in-out infinite; }
-          @keyframes blink { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
           .footer { position: relative; z-index: 5; display: flex; align-items: center;
             justify-content: space-between; padding: 20px 60px;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            font-size: 12px; color: rgba(255,255,255,0.2); }
+            border-top: 1px solid rgba(255,255,255,0.05); font-size: 12px; color: rgba(255,255,255,0.2); }
           .footer-links { display: flex; gap: 24px; }
           .footer-links a { color: rgba(255,255,255,0.2); text-decoration: none; }
           @media (max-width: 900px) {
@@ -120,8 +102,8 @@ export default function Home() {
           <p className="eyebrow">Conciergerie de voyage IA</p>
           <h1 className="headline">
             Racontez à notre concierge<br />
-<em>Cap&apos;tain Baage</em><br />
-votre projet de voyage.
+            <em>Cap&apos;tain Baage</em><br />
+            votre projet de voyage.
           </h1>
           <p className="subline">
             Parlez à Captain Baage de vos envies — même les plus vagues.
@@ -136,20 +118,19 @@ votre projet de voyage.
           </div>
         </div>
         <div className="captain-zone">
-  <div className="captain-float">
-    <img
-  src="https://raw.githubusercontent.com/KissEmAll/Baage-preview/main/baage-preview/Captain%20Baage%20-%20WEB%20HD.png"
-  alt="Captain Baage"
-  className="captain-img"
-  width="380"
-/>
-    />
-    <div className="captain-status">
-      <span className="dot" />
-      Disponible maintenant
-    </div>
-  </div>
-</div>
+          <div className="captain-float">
+            <img
+              src="https://raw.githubusercontent.com/KissEmAll/Baage-preview/main/baage-preview/Captain%20Baage%20-%20WEB%20HD.png"
+              alt="Captain Baage"
+              className="captain-img"
+              width="380"
+            />
+            <div className="captain-status">
+              <span className="dot" />
+              Disponible maintenant
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer className="footer">
