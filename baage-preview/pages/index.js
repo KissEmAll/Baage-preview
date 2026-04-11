@@ -70,20 +70,17 @@ export default function Home() {
           .tag:hover { background: rgba(242,169,35,0.12); border-color: rgba(242,169,35,0.35);
             color: #FFCF6B; transform: translateY(-2px); }
           .captain-zone { display: flex; align-items: center; justify-content: center; }
-          .captain-ring { width: 360px; height: 440px;
-            border: 1px solid rgba(242,169,35,0.15);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            display: flex; align-items: center; justify-content: center;
-            animation: breathe 4s ease-in-out infinite; }
-          @keyframes breathe {
-            0%,100% { box-shadow: 0 0 40px rgba(59,123,245,0.1); }
-            50% { box-shadow: 0 0 80px rgba(59,123,245,0.25); } }
-          .captain-inner { text-align: center; padding: 40px 20px; }
-          .captain-title { font-family: 'Cormorant Garamond', serif; font-size: 22px;
-            font-weight: 400; font-style: italic; color: rgba(255,255,255,0.7); margin-bottom: 16px; }
-          .captain-status { display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
-            border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
+.captain-float { display: flex; flex-direction: column; align-items: center; gap: 24px;
+  animation: floating 4s ease-in-out infinite; }
+@keyframes floating {
+  0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(59,123,245,0.3)); }
+  50% { transform: translateY(-16px); filter: drop-shadow(0 0 60px rgba(59,123,245,0.6)); } }
+.captain-img { width: 380px; height: auto;
+  filter: drop-shadow(0 0 40px rgba(59,123,245,0.4)); }
+.captain-status { display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
+  border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80;
           .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80;
             animation: pulse 2s ease-in-out infinite; }
           @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
