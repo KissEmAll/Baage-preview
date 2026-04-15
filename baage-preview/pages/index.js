@@ -20,6 +20,8 @@ export default function Home() {
       <Head>
         <title>Baage — Votre génie du voyage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Désactive la caméra — micro uniquement */}
+        <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=*" />
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
         <style>{`
           * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -55,18 +57,21 @@ export default function Home() {
           .headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(44px, 5vw, 70px);
             font-weight: 300; line-height: 1.1; color: #fff; margin-bottom: 24px; }
           .headline em { font-style: italic; color: #F2A923; font-weight: 400; }
-          .subline { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.9; max-width: 400px; margin-bottom: 40px; }
-          .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+          .subline { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.9; max-width: 400px; margin-bottom: 32px; }
+          .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
           .tag { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
             border-radius: 100px; padding: 8px 18px; font-size: 13px; color: rgba(255,255,255,0.5);
             cursor: pointer; transition: all 0.2s; white-space: nowrap; }
           .tag:hover { background: rgba(242,169,35,0.12); border-color: rgba(242,169,35,0.35); color: #FFCF6B; transform: translateY(-2px); }
+          .mic-mention { display: flex; align-items: center; gap: 8px;
+            font-size: 12px; color: rgba(255,255,255,0.3);
+            margin-top: 14px; font-style: italic; }
           .captain-zone { display: flex; align-items: center; justify-content: center; }
           .captain-float { display: flex; flex-direction: column; align-items: center; gap: 24px; animation: floating 4s ease-in-out infinite; }
           @keyframes floating {
             0%,100% { transform: translateY(0); filter: drop-shadow(0 0 30px rgba(59,123,245,0.3)); }
             50% { transform: translateY(-16px); filter: drop-shadow(0 0 60px rgba(59,123,245,0.6)); } }
-          .captain-img { width: 380px; height: auto; mix-blend-mode: screen; }
+          .captain-img { width: 380px; height: auto; mix-blend-mode: screen; cursor: pointer; }
           .captain-status { display: inline-flex; align-items: center; gap: 8px;
             background: rgba(13,27,62,0.8); border: 1px solid rgba(242,169,35,0.25);
             border-radius: 100px; padding: 8px 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
@@ -116,7 +121,12 @@ export default function Home() {
             <span className="tag">🏙️ Énergie urbaine</span>
             <span className="tag">✨ Surprenez-moi</span>
           </div>
+          {/* Mention micro — rassurante */}
+          <p className="mic-mention">
+            🎙️ Micro uniquement — pas de caméra nécessaire
+          </p>
         </div>
+
         <div className="captain-zone">
           <div className="captain-float">
             <img
