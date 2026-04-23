@@ -5,7 +5,7 @@ export default function Home() {
   useEffect(() => {
     const script = document.createElement('script')
     script.src = 'https://cdn.dev.runwayml.com/prod/widget.js'
-    script.setAttribute('data-pub-key', 'pub_c3c3436bd63df6d6f929e2c35cb46a4a24508e1e1b26753f8f2a79ddd41dcbe0')
+    script.setAttribute('data-pub-key', 'pub_eb6382f7b605e450ba69450fb914be823d3f634f6527027e50883103eaa04fda')
     script.async = true
     document.body.appendChild(script)
     return () => {
